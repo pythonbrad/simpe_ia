@@ -35,13 +35,13 @@ for y in range(height):
 	for x in range(width):
 		index = _map[y][x]
 		carrefour_data[index] = []
-		if y-1 >= 0 and x < len(_map[y][x]):
+		if y-1 >= 0 and x < len(_map[y-1]):
 			carrefour_data[index].append(_map[y-1][x])
 		if x+1 < width:
 			carrefour_data[index].append(_map[y][x+1])
 		if x-1 >= 0:
 			carrefour_data[index].append(_map[y][x-1])
-		if y+1 < height and x < len(_map[y][x]):
+		if y+1 < height and x < len(_map[y+1]):
 			carrefour_data[index].append(_map[y+1][x])
 
 paths = []
